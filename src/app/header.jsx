@@ -1,27 +1,28 @@
+//* Create Globale Header
+import Logo from "@/components/Logo";
 import Link from "next/link";
 
 const header = () => {
   return (
-    <div>
-      <div className="">
-        <ul className=" flex bg-slate-50 p-5">
-          <li className=" mr-5 ">
-            <h1 className=" text-blue-500 font-black">
-              Common Layout Root Pages
-            </h1>
-          </li>
-          <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-            <Link href="./login">Login</Link>
-          </li>
-          <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-            <Link href="/">Service</Link>
-          </li>
-          <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-            <Link href="/">Menu</Link>
-          </li>
-        </ul>
+    <>
+      <div className=" bg-slate-50 w-full h-auto  flex ">
+        <Logo />
+        <div className=" w-1/4 m-auto bg-slate-200 ">
+          <ul className=" flex p-5 justify-center">
+            <li className=" mr-5 "></li>
+            <li className=" mr-5 hover:font-bold hover:text-red-500 ">
+              <Link href="./login">Login</Link>
+            </li>
+            <li className=" mr-5 hover:font-bold hover:text-red-500 ">
+              <Link href="/">Service</Link>
+            </li>
+            <li className=" mr-5 hover:font-bold hover:text-red-500 ">
+              <Link href="/">Menu</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

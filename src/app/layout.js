@@ -1,6 +1,6 @@
-import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Header from "./header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,24 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="">
-          <ul className=" flex bg-slate-50 p-5">
-            <li className=" mr-5 ">
-              <h1 className=" text-blue-500 font-black">
-                Common Layout Root Pages
-              </h1>
-            </li>
-            <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-              <Link href="./login">Login</Link>
-            </li>
-            <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-              <Link href="/">Service</Link>
-            </li>
-            <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-              <Link href="/">Menu</Link>
-            </li>
-          </ul>
-        </div>
+        <Header />
 
         {children}
       </body>

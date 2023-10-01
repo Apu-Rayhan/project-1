@@ -9,15 +9,17 @@ const header = () => {
         <Logo />
         <div className=" w-1/4 m-auto bg-slate-200 ">
           <ul className=" flex p-5 justify-center">
-            <li className=" mr-5 "></li>
+            <li className=" mr-5 ">
+              <Link href="./home">Home</Link>
+            </li>
             <li className=" mr-5 hover:font-bold hover:text-red-500 ">
               <Link href="./login">Login</Link>
             </li>
             <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-              <Link href="/">Service</Link>
+              <Link href="./service">Service</Link>
             </li>
             <li className=" mr-5 hover:font-bold hover:text-red-500 ">
-              <Link href="/">Menu</Link>
+              <Link href="./menu">Menu</Link>
             </li>
           </ul>
         </div>

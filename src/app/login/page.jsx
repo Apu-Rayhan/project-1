@@ -20,7 +20,6 @@ const Login = () => {
         Home Pages
       </button>
       <Link href="/login/registration" className="underline">
-        {" "}
         registration pages
       </Link>
       <div>Login Pages</div>

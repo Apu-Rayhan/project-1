@@ -1,6 +1,6 @@
 // import Image from "next/image";
 
-import RootPages from "@/pages/RootPages";
+import RootPages from "@/components/RootPages";
 
 export default function Home() {
   return (

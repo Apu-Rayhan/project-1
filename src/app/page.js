@@ -1,15 +1,11 @@
 // import Image from "next/image";
 
-import Link from "next/link";
+import RootPages from "@/pages/RootPages";
 
 export default function Home() {
   return (
     <main className="">
-      <h1 className=""> Next Js App </h1>
-      <h1> Mane Pages Root Router </h1>
-      <Link href="/login" className="underline">
-        Login
-      </Link>
+      <RootPages />
     </main>
   );
 }

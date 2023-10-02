@@ -3,6 +3,7 @@
 // import React from 'react'
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Log from "@/components/Login";
 
 const Login = () => {
   const router = useRouter();
@@ -30,6 +31,7 @@ const Login = () => {
         Navigation Button
       </button>
       <br />
+      <Log />
     </div>
   );
 };

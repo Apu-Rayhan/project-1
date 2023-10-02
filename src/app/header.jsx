@@ -1,6 +1,8 @@
+"use client";
 //* Create Globale Header
 import Logo from "@/components/Logo";
-import Link from "next/link";
+// import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function header() {
   return (
@@ -8,6 +10,7 @@ export default function header() {
       <div className=" bg-slate-50 w-full h-auto flex ">
         <Logo />
         <div className="w-auto m-auto bg-slate-200 flex p-5 justify-center">
+          <Nav name="Root" path="/" />
           <Nav name="Home" path="./home" />
           <Nav name="Login" path="./login" />
           <Nav name="Service" path="./service" />
@@ -19,12 +22,27 @@ export default function header() {
 }
 
 const Nav = (props) => {
+  const router = useRouter();
+  const navigate = (name) => {
+    router.push(name);
+  };
   return (
-    <Link
-      className=" mr-5 hover:font-bold hover:text-red-500"
-      href={props.path}
+    <button
+      onClick={() => navigate(props.path)}
+      className="mr-5 hover:font-bold hover:text-red-500"
     >
       {props.name}
-    </Link>
+    </button>
   );
 };
+
+// const Nav = (props) => {
+//   return (
+//     <Link
+//       className=" mr-5 hover:font-bold hover:text-red-500"
+//       href={props.path}
+//     >
+//       {props.name}
+//     </Link>
+//   );
+// };

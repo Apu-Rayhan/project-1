@@ -20,7 +20,7 @@ const Registration = () => {
         </button>
         <div>
           <Link href="/" className="underline">
-            HOME Pages
+            HOME Pagesssss
           </Link>
         </div>
       </div>

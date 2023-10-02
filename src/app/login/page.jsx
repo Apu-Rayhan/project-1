@@ -13,7 +13,7 @@ const Login = () => {
 
   return (
     <div>
-      <div>Login Pages</div>
+      <Log />
       <button
         type="button"
         onClick={() => navigate("/")}
@@ -31,7 +31,6 @@ const Login = () => {
         Navigation Button
       </button>
       <br />
-      <Log />
     </div>
   );
 };

@@ -2,10 +2,6 @@
 import Logo from "@/components/Logo";
 import Link from "next/link";
 
-// <li className=" mr-5 ">
-//   <Link href="./home">Home</Link>
-// </li>
-
 export default function header() {
   return (
     <>

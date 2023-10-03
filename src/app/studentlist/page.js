@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import React from "react";
 
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const data = ["opu", "rayhan"];
 
-const StudentList = () => {
+const StudentList = ({ params }) => {
   // console.log(data);
   return (
     <div className="">

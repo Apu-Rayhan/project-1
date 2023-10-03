@@ -29,7 +29,7 @@ const Nav = (props) => {
   return (
     <button
       onClick={() => navigate(props.path)}
-      className="mr-5 hover:font-bold hover:text-red-500"
+      className="mr-5 uppercase hover:font-bold hover:text-red-500"
     >
       {props.name}
     </button>

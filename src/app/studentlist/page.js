@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 
 import Link from "next/link";
@@ -8,15 +8,20 @@ import Link from "next/link";
 const data = ["opu", "rayhan"];
 
 const StudentList = () => {
-  console.log(data);
+  // console.log(data);
   return (
     <div className="">
       <h1 className=" font-bold text-lg  text-red-950">Student List</h1>
       <div className="">
-        <ul>
+        <ul className="">
           {data.map((item) => (
             <li key={item}>
-              <Link href={`/studentlist/${item}`}>Student - {item}</Link>
+              <Link href={`/studentlist/${item}`} className="mr-5 capitalize ">
+                Student Name -
+                <span className="mr-5 uppercase hover:font-bold hover:text-red-500">
+                  {item}
+                </span>
+              </Link>
             </li>
           ))}
         </ul>

@@ -15,6 +15,7 @@ export default function header() {
           <Nav name="Login" path="./login" />
           <Nav name="Service" path="./service" />
           <Nav name="Menu" path="./menu" />
+          <Nav name="StudentList" path="./studentlist" />
         </div>
       </div>
     </div>

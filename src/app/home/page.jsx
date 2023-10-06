@@ -9,6 +9,8 @@ const page = () => {
       </div>
       <div className="">
         <ProductList />
+        <br />
+        <ProductList />
       </div>
     </div>
   );

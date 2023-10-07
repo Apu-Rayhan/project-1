@@ -1,19 +1,32 @@
-"use client";
+// "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const ProductList = () => {
-  const [product, setProduct] = useState([]);
+async function fetchdata() {
+  //Call API in Server component in next.js 13.4
+  // create server side component and fecth api
+  let data = await fetch("https://dummyjson.com/products");
+  data = await data.json();
+  return data.products;
+}
 
-  useEffect(() => {
-    async function fetchdata() {
-      let data = await fetch("https://dummyjson.com/products");
-      data = await data.json();
-      console.log(data);
-      setProduct(data.products);
-    }
-    fetchdata();
-  }, []);
+const ProductList = async () => {
+  // fetch API data in Client component in next.js 13.4
+  // create client side component and fecth api
+
+  // const [product, setProduct] = useState([]);
+  // useEffect(() => {
+  //   async function fetchdata() {
+  //     let data = await fetch("https://dummyjson.com/products");
+  //     data = await data.json();
+  //     // console.log(data);
+  //     setProduct(data.products);
+  //   }
+  //   fetchdata();
+  // }, []);
+
+  let product = await fetchdata();
+  // console.log(product);
 
   return (
     <div className=" w-10/12 h-auto bg-slate-200 m-auto">
@@ -33,6 +46,7 @@ const ProductList = () => {
                   alt="Description of the image"
                   width={300}
                   height={100}
+                  priority={true}
                 />
               </div>
               <div className="">

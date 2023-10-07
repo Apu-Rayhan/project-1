@@ -1,5 +1,6 @@
 // "use client";
 import Image from "next/image";
+import { Btn } from "./Btn";
 // import { useState, useEffect } from "react";
 
 async function fetchdata() {
@@ -10,7 +11,7 @@ async function fetchdata() {
   return data.products;
 }
 
-const ProductList = async () => {
+const ProductList = async ({ che }) => {
   // fetch API data in Client component in next.js 13.4
   // create client side component and fecth api
 
@@ -38,7 +39,7 @@ const ProductList = async () => {
           {product.map((item) => (
             <div
               key={item.id}
-              className=" w-1/3 h-80 bg-slate-300 m-5 p-5 rounded basis-1/5 "
+              className=" w-1/3 h-auto bg-slate-300 m-5 p-5 rounded basis-1/5 "
             >
               <div className=" w-full h-auto">
                 <Image
@@ -56,6 +57,7 @@ const ProductList = async () => {
                 <h3> price : {item.price}</h3>
                 <h3> category : {item.category}</h3>
                 <h3> rating : {item.rating}</h3>
+                <Btn price={item.price} btnName="Check Price" />
               </div>
             </div>
           ))}

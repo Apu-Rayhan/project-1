@@ -1,7 +1,9 @@
 import React from "react";
 import ProductList from "@/components/ProductList";
+import UsersList from "@/components/UsersList";
+// import getUsers from "@/jsonData/getUsers";
 
-const page = () => {
+const page = async () => {
   return (
     <div>
       <div className="">
@@ -9,6 +11,7 @@ const page = () => {
       </div>
       <div className="">
         <ProductList />
+        <UsersList />
       </div>
     </div>
   );
